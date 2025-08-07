@@ -1,0 +1,16 @@
+<?php 
+$filename = "example.txt";
+$file = fopen($filename, "w");
+if ($file) {
+echo "Step 3: File '$filename' opened successfully.<br>";
+fwrite($file,"This is a sample text.\nwritten using PHP file handling.\n");
+
+echo "Step 4: Data written to the file.<br>";
+
+fclose($file);
+echo "Step 5: File '$filename' closed successfully.";
+}
+else {
+echo "Error: Unable to open the file.";
+}
+?>
